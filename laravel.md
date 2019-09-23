@@ -20,10 +20,10 @@ class PostController {
 To allow easy click-throughs within IDEs, avoid using strings to define controller actions. Instead, use the tuple syntax.
 
 ```php
-// Before
+// Bad
 Route::get('/posts', 'GetPostsController@index');
 
-// After
+// Good
 Route::get('/posts', [GetPostsController::class, 'index']);
 ```
 
