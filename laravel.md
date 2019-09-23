@@ -13,3 +13,21 @@ class PostController {
   }
 }
 ```
+
+## IDE-Friendly Routes
+*https://freek.dev/1210-a-better-way-to-register-routes-in-laravel*
+
+To allow easy click-throughs within IDEs, avoid using strings to define controller actions. Instead, use the tuple syntax.
+
+```php
+// Before
+Route::get('/posts', 'GetPostsController@index');
+
+// After
+Route::get('/posts', [GetPostsController::class, 'index']);
+```
+
+## Parallel Testing
+https://medium.com/realblocks-blog/parallel-testing-for-laravel-how-we-cut-test-suite-execution-time-to-1-3-in-one-day-544e458f48ad
+
+TL;DR use the [Paratest](https://github.com/paratestphp/paratest) library for massive performance boosts to your test suite.
