@@ -1,5 +1,16 @@
 # Laravel
 
+## Custom Aliases
+
+```bash
+alias art='php artisan'
+alias lmm='php artisan make:model --migration'
+alias ide='php artisan ide-helper:generate && php artisan ide-helper:models && php artisan ide-helper:meta'
+alias db='php artisan migrate:fresh --seed'
+alias test='vendor/bin/phpunit'
+alias ptest='vendor/bin/paratest -p16 --runner=WrapperRunner'
+```
+
 ## Single-Line Controllers
 *Credit to Moe for teaching me this.*
 
