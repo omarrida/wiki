@@ -54,6 +54,9 @@ Route::get('/posts', 'GetPostsController@index');
 
 // Good
 Route::get('/posts', [GetPostsController::class, 'index']);
+
+// Good
+Route::get('/posts', GetPostsController::class);
 ```
 
 ## Parallel Testing
