@@ -11,6 +11,24 @@ alias test='vendor/bin/phpunit'
 alias ptest='vendor/bin/paratest -p16 --runner=WrapperRunner'
 ```
 
+## Invokable Controllers
+
+For extra simple controllers, you can define an invokable controller action in the routes file:
+
+```php
+Route::get('/posts', GetPostsController::class);
+```
+
+Then in your controller class:
+
+```php
+class GetPostsController {
+  public function __invoke() {
+    // Do something
+  }
+}
+```
+
 ## Single-Line Controllers
 *Credit to Moe for teaching me this.*
 
