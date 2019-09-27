@@ -1,5 +1,11 @@
 # Laravel
 
+## Deployments
+
+[Forge](https://forge.laravel.com) is the best way to deploy Laravel apps.
+
+[Vapor](https://vapor.laravel.com) is a new way to deploy the app as managed Lamda functions. Serverless PHP is pretty awesome and very easy to scale. Fantastic choice for startups that want to push off the worries of scale and focus on building a great product experience.
+
 ## Custom Aliases
 
 ```bash
@@ -30,7 +36,8 @@ class GetPostsController {
 ```
 
 ## Single-Line Controllers
-*Credit to Moe for teaching me this.*
+
+*Credit to [Moe](https://twitter.com/moealmaw) for teaching me this.*
 
 Extend `FormRequest` for all controller actions to encapsulate authorization and validation. Include methods `handle()` and `response()` which further encapsulate the handling of the request and formatting the response respectively.
 
@@ -44,7 +51,8 @@ class PostController {
 ```
 
 ## IDE-Friendly Routes
-*https://freek.dev/1210-a-better-way-to-register-routes-in-laravel*
+
+*[Credit to Freek](https://freek.dev/1210-a-better-way-to-register-routes-in-laravel)*
 
 To allow easy click-throughs within IDEs, avoid using strings to define controller actions. Instead, use the tuple syntax.
 
