@@ -6,6 +6,22 @@
 
 [Vapor](https://vapor.laravel.com) is a new way to deploy the app as managed Lamda functions. Serverless PHP is pretty awesome and very easy to scale. Fantastic choice for startups that want to push off the worries of scale and focus on building a great product experience.
 
+> I always forget to add the dynamodb cache driver when I upgrade from 5.8 to 6 and want to use vapor. Here's the link so I don't have to dig through my history:
+
+https://codinglabs.com.au/blog/2019/8/under-the-hood-with-laravel-vapor
+
+TL;DR is add this to the `cache.php` file:
+
+```
+'dynamodb' => [
+  'driver' => 'dynamodb',
+  'key' => env('AWS_ACCESS_KEY_ID'),
+  'secret' => env('AWS_SECRET_ACCESS_KEY'),
+  'region' => env('AWS_REGION', 'us-east-1'),
+  'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
+],
+```
+
 ## Custom Aliases
 
 ```bash
