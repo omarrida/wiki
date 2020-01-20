@@ -37,7 +37,7 @@ class GetPostsController {
 
 ## Single-Line Controllers
 
-*Credit to [Moe](https://twitter.com/moealmaw) for teaching me this.*
+> Note: This method has a tradeoff - if you throw all your controller logic in the request, your controller becomes thin, but you've just delegated model logic to the FormRequest. All model-related logic should be at the model layer, not the request. This helped me for several months, and then I refactored away from it as my domain understanding became more mature.
 
 Extend `FormRequest` for all controller actions to encapsulate authorization and validation. Include methods `handle()` and `response()` which further encapsulate the handling of the request and formatting the response respectively.
 
